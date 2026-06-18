@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="DAN product detail page." />
+    <title>DAN | Product Detail</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="product-page">
+    <a class="skip-link" href="#main">본문으로 이동</a>
+
+    <header class="site-header" data-header>
+      <nav class="nav" aria-label="Primary navigation">
+        <button class="nav-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="menu-panel">
+          <span></span>
+          <span></span>
+          <span class="sr-only">메뉴 열기</span>
+        </button>
+
+        <div class="nav-links" aria-label="Main sections">
+          <a href="index.html#collection">Shop</a>
+          <a href="index.html#collection">Collection</a>
+          <a href="index.html#about">About</a>
+        </div>
+
+        <a class="brand-mark" href="index.html#home" aria-label="DAN homepage">
+          <img class="brand-logo" src="assets/dan-logo.png" alt="DAN" />
+        </a>
+
+        <div class="nav-actions" aria-label="Member links">
+          <a href="#account">Account</a>
+          <a href="#login">Login</a>
+          <button class="bag-button" type="button" data-bag-button>Cart <span data-bag-count>0</span></button>
+          <a href="#search">Search</a>
+        </div>
+      </nav>
+    </header>
+
+    <aside class="menu-panel" id="menu-panel" data-menu-panel aria-hidden="true">
+      <div class="menu-panel__inner">
+        <button class="menu-close" type="button" data-menu-toggle aria-label="메뉴 닫기">Close</button>
+        <a href="index.html#collection" data-menu-link>Shop</a>
+        <a href="index.html#collection" data-menu-link>Collection</a>
+        <a href="index.html#about" data-menu-link>About</a>
+      </div>
+    </aside>
+
+    <main class="product-detail" id="main" data-product-detail>
+      <section class="detail-media" aria-label="Product image">
+        <img data-product-image src="assets/dan-product-01.jpeg" alt="" />
+        <div class="detail-arrows" aria-label="Product image gallery">
+          <button type="button" data-gallery-prev aria-label="이전 사진">‹</button>
+          <button type="button" data-gallery-next aria-label="다음 사진">›</button>
+        </div>
+      </section>
+
+      <section class="detail-panel" aria-label="Product information">
+        <a class="back-link" href="index.html#collection">Back to collection</a>
+        <div class="detail-copy">
+          <img class="detail-thumb" data-product-thumb src="assets/dan-product-01.jpeg" alt="" />
+          <div>
+            <p class="eyebrow" data-product-number>Look 01</p>
+            <h1 data-product-name>Otgoreum Frill Mini Dress</h1>
+            <p class="detail-korean" data-product-korean>오트고름 프릴 미니 드레스</p>
+          </div>
+        </div>
+
+        <dl class="product-meta">
+          <div>
+            <dt>Price</dt>
+            <dd data-product-price>KRW 200,000</dd>
+          </div>
+          <div>
+            <dt>Size</dt>
+            <dd>
+              <select aria-label="Size">
+                <option>Select option</option>
+                <option>XS</option>
+                <option>S</option>
+                <option>M</option>
+              </select>
+            </dd>
+          </div>
+        </dl>
+
+        <div class="detail-accordions">
+          <details open>
+            <summary>Description</summary>
+            <p data-product-description></p>
+          </details>
+          <details>
+            <summary>Fabric</summary>
+            <p data-product-fabric></p>
+          </details>
+          <details>
+            <summary>Size guide</summary>
+            <p>XS-S-M 기준으로 제작되며, 자세한 피팅은 DAN atelier에서 상담할 수 있습니다.</p>
+          </details>
+        </div>
+
+        <button class="sold-button" type="button">Sold Out</button>
+      </section>
+    </main>
+
+    <div class="toast" data-toast role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
